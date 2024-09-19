@@ -34,7 +34,69 @@
 </head>
 
 <body>
-    <!-- Most if not all of your content will go here -->
+    <!-- 
+        INFO:-
+
+        Classes: when multiple elements will share the same style or functionallity. i.e.: Style multiple buttonsor sections the same way
+        ID's: Used for elements that are unique. i.e.: A header, specific button, or specific section.
+
+        Padding: internal spacing
+        Margin: external spcaing
+
+         -->
+
+     <!---------------------------------- Navigation Bar Section ---------------------------------->
+     <nav class="navbar navbar-default fixed-top navbar-expand-lg navbar-dark" id="navbar-hide"> <!--nabv belomgs to class, and has own ID-->
+                <!-- Creating a flex box that makes "flex items" -->
+                <div class="navbar-header d-flex col">
+
+                    <!-- Logo now takes you to your name/introduction via bookmark -->
+                    <a class="navbar-brand" href="#introduction"> <!--herf is linking image logo to intro section-->
+                        <!-- TODO: Create and add your logo here! -->
+                        <img src="assets/YOUR_LOGO.png" style= width:45px style= height:30px alt="Logo">
+                    </a>
+        
+                    <!-- ml-auto creates margins on the left and pushes dropdown toggle to the far right -->
+                    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" 
+                    data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" 
+                    aria-label="Toggle navigation">
+        
+                        <span class="navbar-toggler-icon"></span>
+        
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                    <div class="navbar-nav">
+            
+                        <!-- Update so href ("link") takes users to bookmarked location (FIXME) -->
+                        <a class="nav-item nav-link" href="#about-me">About Me</a>
+                        <a class="nav-item nav-link" href="#experience">Experience</a></li>
+                        <a class="nav-item nav-link" href="#projects">Projects</a></li>
+                        <a class="nav-item nav-link" href="#contact-me">Contact Me</a></li>
+                    </div>
+            
+                    <!-- No longer part of list in nav bar, ml-auto pushes it to the right of the navbar, it's now also a button with an outline -->
+                    <!-- TODO: UPDATE RESUME LINK -->
+                    <a href="assets/xyz-resume.pdf" class="ml-auto" target="_blank"><button type="button" 
+                        class="btn btn-sm btn-outline-dark" style="color: #ffffff">Resume</button></a>
+                </div>
+            </nav>
+     </nav>
+
+      <!---------------------------------- Introduction Section ---------------------------------->
+
+    <!-- TODO: Name, A&M class, major, intro-content makes the original background image darker -->
+    <div class="container-fluid background-img" id="introduction">
+        <div class="row justify-content-center">
+            <div class="name">Hamzah Issa</div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="background-text">Texas A&M | Electrical Engineering</div>
+        </div>
+    </div>
+
+
 </body>
 
 <!-- Closing tag, ignore this -->
