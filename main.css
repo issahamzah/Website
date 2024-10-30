@@ -113,7 +113,7 @@ nav {
 /* This is an "ID" which is used as a bookmark - Here we add padding to the top
    and make it take up the entire vertical screen with 100vh */
    #introduction {
-    padding-top: 38vh; 
+    padding-top: 40vh; 
     height: 100vh;
     line-height: 1.2 !important; /* Changes line-height from 1.5 since there was too much space in-between lines */
 }
@@ -129,6 +129,7 @@ nav {
 /* Styles text under name on landing page */
 .background-text {
     font-size: 5.6vmin; /* 50px (4.8vmin orig) */
+    text-align: center;
     color: var(--text-color);
     padding-bottom: 0%;
     margin: 0;
@@ -144,4 +145,279 @@ nav {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+
+
+/* -------------------------------- About Me Section -------------------------------- */
+
+/* Makes the "About Me" section take up at minimum the entire height of the screen */
+#about-me {
+    padding: 250px 12vmin 0vmin 12vmin; 
+    min-height: 100vmin;
+    margin-top: 250px;
+}
+
+#about-me p {
+    margin-bottom: 0%;
+}
+
+/* Adds a color and weight to links in "About Me" */
+.aboutMe-link {
+    color: rgb(70, 170, 224);
+    font-size: 1.2rem;
+    font-weight: 600 !important;
+}
+
+/* Part of aboutMe-link, defines transformation type and timing */
+#about-me a {
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Gives a "popping" effect when hovering on links in "About Me" description */
+#about-me a:hover {
+    color: rgb(70, 170, 224);
+    text-decoration: none;
+    transform: scale(1.04);
+}
+
+/* Creates round-box with "About Me" description */
+.aboutMe-box {
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.25);
+    
+    box-shadow: 4px 4px 12px 4px rgba(0,0,0,0.2);
+    transition: 0.4s;
+}
+
+/* Creates light white shadow around box on hover */
+.aboutMe-box:hover {
+    box-shadow: 4px 8px 24px 4px rgba(255, 255, 255, 0.4);
+}
+
+/* Creates space inside of "About Me" box for description */
+.about-spacing {
+    padding: 3.5vmin 3.5vmin 3.5vmin 3.5vmin;
+}
+
+/* Formats text inside round-box */
+.about-text {
+    font-size: 1.1rem; /* 50px */
+    color: var(--text-color);
+    padding-bottom: 0%;
+}
+
+/* Puts a nice shadow around circular headshot */
+.about-circle {
+    height: 24vmax;
+    width: 24vmax;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.25);    
+    box-shadow: 4px 4px 12px 4px rgba(0,0,0,0.2);
+    transition: 0.4s;
+}
+
+/* Adds cool hover effect (creates halo/light shadow) */
+.about-circle:hover {
+    box-shadow: 4px 8px 24px 4px rgba(255, 255, 255, 0.4);
+}
+
+/* Styles/sizes the headshot */
+.about-circle img {
+    height: 24vmax; /* Orig 28vmin */
+    width: auto;
+    border-radius: 50%;
+    margin: auto;
+}
+
+
+/* -------------------------------- Experience Section -------------------------------- */
+
+/* Makes the "Experience" section take up at minimum the entire height of the screen */
+#experience {
+    padding-top: 85px; /* Changed 48vmin to 85px - 85px 12vmin 0vmin 12vmin */
+    min-height: 100vmin;
+}
+
+/* Sets default styling for every <p> element in the "Experience" Section */
+#experience p {
+    font-size: 1.1rem; /* 50px */
+    color: var(--text-color);
+    padding-bottom: 0%;
+    margin-bottom: 0%;
+}
+
+
+/* -------------------------------- Projects Section -------------------------------- */
+
+/* Project Section Background */
+#projects {
+    text-align: center;
+    padding: 4em 1em;
+    background: linear-gradient(to left, #243B55, #141E30); /* Matches the body gradient */
+    background-color: #141E30; /* Fallback color */
+}
+
+/* Projects Container */
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+    padding-top: 2em;
+}
+
+/* Project Card Styling */
+.project-card {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    background-color: rgba(0, 0, 0, 0.25); /* Semi-transparent to blend with gradient */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25); /* Soft shadow effect */
+    text-align: center;
+    transition: transform 0.3s ease;
+    padding: 1.5em 1em;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-image {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1em;
+}
+
+.project-details h3 {
+    font-size: 1.5em;
+    color: var(--text-color);
+    margin-bottom: 0.5em;
+}
+
+.project-details p {
+    font-size: 0.9em;
+    color: #d1d1d1; /* Light grey text for readability */
+    margin-bottom: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+}
+
+.project-details .fas {
+    color: #d1d1d1;
+}
+
+/* Read More Button */
+.read-more-btn {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.read-more-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Modal Background */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #0056b3; /* Matches the card background color */
+    margin: 10% auto;
+    padding: 2em;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+    color: white;
+}
+
+/* Close Button */
+.close {
+    color: white;
+    float: right;
+    font-size: 1.5em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #bbb;
+}
+
+.modal-content h3 {
+    font-size: 1.8em;
+    margin-bottom: 0.5em;
+    text-align: center;
+}
+
+.modal-content p {
+    font-size: 1em;
+    line-height: 1.5;
+    color: #d1d1d1;
+    text-align: justify;
+    margin-bottom: 1.5em;
+}
+
+.modal-content button {
+    display: block;
+    margin: 0 auto;
+    padding: 0.5em 1em;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal-content button:hover {
+    background-color: #0056b3;
+}
+
+
+/* -------------------------------- Contact Me Section -------------------------------- */
+
+#contact-me {
+    text-align: center;
+    padding: 4em 1em;
+    background: linear-gradient(to left, #243B55, #141E30); /* Matches the body gradient */
+    background-color: #141E30; /* Fallback color */
+}
+
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons .icon {
+    font-size: 2em;
+    color: #ffffff;
+    margin: 0 15px;
+    transition: color 0.3s;
+    text-decoration: none; /* Removes the underline */
+}
+
+.social-icons .icon:hover {
+    color: #00acee; /* Customize the hover color */
 }
